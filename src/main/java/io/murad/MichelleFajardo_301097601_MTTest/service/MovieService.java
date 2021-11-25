@@ -1,7 +1,7 @@
 package io.murad.MichelleFajardo_301097601_MTTest.service;
 
 
-import io.murad.MichelleFajardo_301097601_MTTest.controller.model.Movie;
+import io.murad.MichelleFajardo_301097601_MTTest.model.Movie;
 import io.murad.MichelleFajardo_301097601_MTTest.repository.MovieRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

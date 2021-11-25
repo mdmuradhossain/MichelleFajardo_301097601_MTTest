@@ -1,4 +1,4 @@
-package io.murad.MichelleFajardo_301097601_MTTest.controller.model;
+package io.murad.MichelleFajardo_301097601_MTTest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,5 +23,4 @@ public class Movie {
     private Integer year;
     private MovieLanguage language;
     private Genre genre;
-
 }
