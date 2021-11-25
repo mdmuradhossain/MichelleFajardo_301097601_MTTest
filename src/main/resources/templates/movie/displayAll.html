@@ -7,12 +7,15 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="card mb-2 mx-auto" style="width: 18rem;" th:each="movie : ${movies}">
-            <img th:src="@{'showImage/'+${movie.thumbnailName}}" class="card-img-top" alt="...">
+        <div class="container text-center p-2 mx-auto">
+            <a class="navbar-brand btn btn-primary btn-lg mx-auto" href="/">Home</a>
+        </div>
+        <div class="card mb-2 mx-auto" style="width: 20rem;" th:each="movie : ${movies}">
+            <img th:src="@{'/movies/showImage/'+${movie.thumbnailName}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title" th:text="${movie.movieName}"></h5>
-<!--                <p class="card-text" th:text="${movie.movieDescription}"></p>-->
-                <a th:href="@{/movies/showMovie/(id=${movie.id})}" class="btn btn-primary">Visit</a>
+                <p class="card-text" th:text="${movie.movieDescription}"></p>
+                <a th:href="@{/movies/showMovie/{id}(id=${movie.id})}" class="btn btn-primary">Display Movie</a>
             </div>
         </div>
     </div>

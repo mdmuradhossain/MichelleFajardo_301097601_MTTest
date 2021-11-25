@@ -74,7 +74,7 @@ public class MovieController {
     }
 
 
-    @RequestMapping(value = "showImage/{file}",method = RequestMethod.GET,produces = MediaType.ALL_VALUE)
+    @RequestMapping(value = "/showImage/{file}",method = RequestMethod.GET,produces = MediaType.ALL_VALUE)
     @ResponseBody
     public ResponseEntity<ByteArrayResource> getFile(@PathVariable("file") String file) {
         if (!file.equals("") || file != null) {
