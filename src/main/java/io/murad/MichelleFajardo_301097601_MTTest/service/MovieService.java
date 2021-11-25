@@ -14,8 +14,8 @@ public class MovieService {
 
     private final MovieRepository movieRepository;
 
-    public Movie saveMovie(Movie movie) {
-        return movieRepository.save(movie);
+    public void saveMovie(Movie movie) {
+        movieRepository.save(movie);
     }
 
     public Movie getMovie(Long id) {

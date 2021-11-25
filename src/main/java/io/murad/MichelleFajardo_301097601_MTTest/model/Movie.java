@@ -18,6 +18,9 @@ public class Movie {
     private Long id;
 
     private String movieName;
+    @Lob
+    private String movieDescription;
+    private String thumbnailName;
     private String country;
     private Integer duration;
     private Integer year;
