@@ -5,10 +5,7 @@ import io.murad.MichelleFajardo_301097601_MTTest.service.MovieService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,20 +24,25 @@ public class MovieController {
         return "movie/movieRecordForm";
     }
 
+    @PostMapping(path = "/saveMovie")
     public String addMovie(@ModelAttribute("movie") Movie movie){
         movieService.saveMovie(movie);
-        return "movie/displayAll";
+        return  "redirect:/movies/showMovie/"+movie.getId();
+//        return "movie/displayAll";
     }
 
+    @GetMapping(path = "/showMovie/{id}")
     public String displayMovie(@PathVariable("id") Long id,Model model){
        Movie movie = movieService.getMovie(id);
         model.addAttribute("movie",movie);
         return  "movie/display";
     }
 
+    @GetMapping(path = "/displayAllMovies")
     public String displayAll(Model model){
         List<Movie> movieList = movieService.getAllMovies();
         model.addAttribute("movies",movieList);
         return "movie/displayAll";
     }
+
 }

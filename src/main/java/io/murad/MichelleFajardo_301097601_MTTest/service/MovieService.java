@@ -26,18 +26,18 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public Movie updateMovie(Long id, Movie movie) {
-        Movie updateMovie = movieRepository.findById(id).get();
-        updateMovie.setMovieName(movie.getMovieName());
-        updateMovie.setCountry(movie.getCountry());
-        updateMovie.setDuration(movie.getDuration());
-        updateMovie.setGenre(movie.getGenre());
-        updateMovie.setYear(movie.getYear());
-        return movieRepository.save(updateMovie);
-    }
-
-    public void deleteMovie(Long id) {
-        movieRepository.deleteById(id);
-    }
+//    public Movie updateMovie(Long id, Movie movie) {
+//        Movie updateMovie = movieRepository.findById(id).get();
+//        updateMovie.setMovieName(movie.getMovieName());
+//        updateMovie.setCountry(movie.getCountry());
+//        updateMovie.setDuration(movie.getDuration());
+//        updateMovie.setGenre(movie.getGenre());
+//        updateMovie.setYear(movie.getYear());
+//        return movieRepository.save(updateMovie);
+//    }
+//
+//    public void deleteMovie(Long id) {
+//        movieRepository.deleteById(id);
+//    }
 
 }

@@ -22,5 +22,5 @@ public class Movie {
     private Integer duration;
     private Integer year;
     private MovieLanguage language;
-    private Genre genre;
+    private MovieGenre genre;
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +15,8 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <a href="" class="btn btn-primary">Add Movie</a>
-        <a href="" class="btn btn-primary">Display Movies</a>
+        <a th:href="@{/movies/movieRecordForm}" class="btn btn-primary">Add Movie</a>
+        <a th:href="@{/movies/displayAllMovies}" class="btn btn-primary">Display Movies</a>
     </div>
 </header>
 
